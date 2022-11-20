@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from typing import List
 
 #Declaring variable
@@ -15,12 +15,10 @@ def get_requirements_list()->List[str]:
     with open (REQUIREMENT_FILE_NAME) as requirement_file:
         return requirement_file.readlines()
 
-
 setup(
     name = 'housing-predictor',
     version = '0.0.1',
     author = 'Shashvath N',
     description='Housing price prediction - Regression Task',
-    packages = ['housing'],
-    install_requires = get_requirements_list()
+    packages = find_packages()
 )
