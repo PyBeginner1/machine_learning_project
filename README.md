@@ -95,5 +95,5 @@ docker stop container_id
 ```
 
 ```
-python setup.py
+python setup.py install
 ```
