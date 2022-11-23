@@ -97,3 +97,7 @@ docker stop container_id
 ```
 python setup.py install
 ```
+
+The output that we get from each components/stages in a Pipeline is called Artifact.
+
+Configuration is used to mention from where the data will be pulled.
