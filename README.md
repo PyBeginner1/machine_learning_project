@@ -104,3 +104,7 @@ Configuration is used to mention from where the data will be pulled.
 
 
 Install ipynbkernel
+```
+pip install ipykernel
+```
+
