@@ -1,5 +1,6 @@
 from housing.pipeline.pipeline import  Pipeline
 from flask import Flask
+from housing.logger import logging
 
 def main():
     try:
