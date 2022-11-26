@@ -1,5 +1,6 @@
 from collections import namedtuple
 
+'''This File is an Input for each component'''
 
 #Config required to collect data
 DataIngestionConfig = namedtuple('DataIngestionConfig',
