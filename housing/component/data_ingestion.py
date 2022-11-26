@@ -49,7 +49,7 @@ class DataIngestion:
         try:
             raw_data_dir = self.data_ingestion_config.raw_data_dir
             
-            if os.opath.exists:
+            if os.path.exists(raw_data_dir):
                 os.remove(raw_data_dir)
             #Create directory
             os.makedirs(raw_data_dir, exist_ok=True)
@@ -86,7 +86,7 @@ class DataIngestion:
             strat_train_set = None 
             strat_test_set = None 
 
-            split = StratifiedShuffleSplit(n_splits = 1, test_size = 0.2,random_shuffle = 1)
+            split = StratifiedShuffleSplit(n_splits = 1, test_size = 0.2,random_state = 1)
 
             for train_index, test_index in split.split(housing_data_frame, housing_data_frame['income_cat']):
                 strat_train_set = housing_data_frame.loc[train_index].drop('income_cat', axis = 1)
