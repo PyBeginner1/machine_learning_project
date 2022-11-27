@@ -9,7 +9,7 @@ DataIngestionConfig = namedtuple('DataIngestionConfig',
 
 #Data Validation - Checking for Null, Outliers, etc
 DataValidationConfig = namedtuple('DataValidationConfig',
-['schema_file_path'])
+['schema_file_path','report_file_path','report_page_file_path']) 
 
 
 #Feature Engineering(preprocessed_object_file_path - pickle file for F.E done)

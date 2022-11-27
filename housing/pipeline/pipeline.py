@@ -25,7 +25,10 @@ class Pipeline:
             raise HousingException(e,sys) from e
         
     def start_data_validation(self):
-        pass 
+        try:
+            pass
+        except Exception as e:
+            raise HousingException(e,sys) from e 
 
 
     def start_data_transformation(self):
