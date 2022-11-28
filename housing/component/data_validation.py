@@ -83,7 +83,7 @@ class DataValidation:
 
     def get_and_save_data_drift_report(self):
         try:
-            profile = Profile(sections=[DataDriftProfileSection])
+            profile = Profile(sections=[DataDriftProfileSection()])
 
             train_df,test_df = self.get_train_and_test_df() 
 
