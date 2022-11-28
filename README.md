@@ -108,3 +108,7 @@ Install ipynbkernel
 pip install ipykernel
 ```
 
+To check for Data Drift(Change in Distribution of Data):
+```
+pip install evidently
+```
