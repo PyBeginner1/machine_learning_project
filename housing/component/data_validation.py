@@ -18,6 +18,7 @@ class DataValidation:
     def __init__(self, data_validation_config: DataValidationConfig,
         data_ingestion_artifact: DataIngestionArtifact):
         try:
+            logging.info(f"{'>>'*30}Data Validation log started.{'<<'*30} \n\n")
             self.data_validation_config = data_validation_config
             self.data_ingestion_artifact = data_ingestion_artifact 
         except Exception as e:
@@ -73,6 +74,8 @@ class DataValidation:
         try:
             validation_status = False 
 
+            validation_status = True
+
             return validation_status 
         except Exception as e:
             raise HousingException(e,sys) from e
@@ -114,14 +117,10 @@ class DataValidation:
             dashboard.calculate(train_df, test_df)
 
             report_page_file_path = self.data_validation_config.report_page_file_path
-
             report_page_dir = os.path.dirname(report_page_file_path)
-
-            if os.path.exists(report_page_dir):
-                os.remove(report_page_dir)
             os.makedirs(report_page_dir, exist_ok = True)
 
-            dashboard.save(self.data_validation_config.report_page_dir)
+            dashboard.save(report_page_file_path)
         except Exception as e:
             raise HousingException(e,sys) from e
     
