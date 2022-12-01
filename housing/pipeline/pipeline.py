@@ -36,7 +36,10 @@ class Pipeline:
 
 
     def start_data_transformation(self):
-        pass 
+        try:
+            pass 
+        except Exception as e:
+            raise HousingException(e,sys) from e
 
 
     def start_model_trainer(self):

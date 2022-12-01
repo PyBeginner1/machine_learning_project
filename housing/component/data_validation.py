@@ -90,14 +90,8 @@ class DataValidation:
             profile.calculate(train_df, test_df)
             report = json.loads(profile.json())
             
-            ####
             report_file_path = self.data_validation_config.report_file_path
-
             report_dir = os.path.dirname(report_file_path)
-
-            if os.path.exists(report_dir):
-                os.remove(report_dir)
-            
             os.makedirs(report_dir, exist_ok = True)
 
             with open(report_file_path,'w') as report_file:

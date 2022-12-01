@@ -5,8 +5,8 @@ from housing.config.configuration import Configuration
 
 def main():
     try:
-        pipeline = Pipeline()
-        pipeline.run_pipeline()
+        c = Configuration().get_data_transformation_config()
+        print(c)
     except Exception as e:
         logging.error(f"{e}")
         print(e)
