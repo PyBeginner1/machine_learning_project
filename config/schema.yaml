@@ -1,4 +1,5 @@
 columns:
+  
   longitude: float
   latitude: float
   housing_median_age: float

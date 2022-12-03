@@ -142,7 +142,7 @@ class DataValidation:
                 is_validated=True,
                 message='Data Validation performed successfully'
             )
-            logging.info('Data Validation Artifact: {data_validation_artifact}')
+            logging.info('Data Validation Artifact: {data_validation_artifact} \n\n')
 
             return data_validation_artifact
         except Exception as e:

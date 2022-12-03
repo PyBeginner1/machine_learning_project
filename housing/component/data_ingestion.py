@@ -111,7 +111,7 @@ class DataIngestion:
                     is_ingested=True,
                     message = f"Data ingestion completed successfully")
             
-            logging.info(f"Data Inegstion Atrifact: [{data_ingestion_artifact}]")
+            logging.info(f"Data Ingestion Atrifact: [{data_ingestion_artifact}]")
             return data_ingestion_artifact
 
         except Exception as e:
