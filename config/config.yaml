@@ -4,8 +4,9 @@ training_pipeline_config:
 
 
 data_ingestion_config:
-  dataset_download_url: https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz
-  #dataset_download_url: https://www.kaggle.com/datasets/camnugent/california-housing-prices
+  dataset_download_url: https://github.com/ageron/handson-ml2/blob/master/datasets/housing/housing.tgz
+  #dataset_download_url: https://github.com/PyBeginner1/machine_learning_project/blob/main/housing.tgz
+  #dataset_download_url: http://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.tgz
   raw_data_dir: raw_data
   tgz_download_dir: tgz_data
   ingested_dir: ingested_data
