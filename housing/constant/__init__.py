@@ -8,7 +8,10 @@ CONFIG_FILENAME = 'config.yaml'
 CONFIG_FILE_PATH = os.path.join(ROOT_DIR, CONFIG_DIR,CONFIG_FILENAME)
 SCHEMA_FILE_NAME = 'schema.yaml'
 
-CURRENT_TIME_STAMP = f"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"
+def get_current_time_stamp():
+    return f"{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"
+
+CURRENT_TIME_STAMP = get_current_time_stamp()
 
 #Data Ingestion related Variable
 DATA_INGESTION_CONFIG_KEY = "data_ingestion_config"

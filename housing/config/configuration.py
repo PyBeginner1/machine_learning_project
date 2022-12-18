@@ -189,7 +189,7 @@ class Configuration:
             return model_pusher_config
 
         except Exception as e:
-            raise HousingException(e,sys) from 
+            raise HousingException(e,sys) from e
     def get_training_pipeline_config(self) -> TrainingPipelineConfig:
         try:
             training_pipeline_config = self.config_info[TRAINING_PIPELINE_CONFIG_KEY]
